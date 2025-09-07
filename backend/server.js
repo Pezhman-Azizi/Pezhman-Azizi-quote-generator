@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
 // Middleware
 app.use(cors());
@@ -35,8 +35,8 @@ app.post("/", (req, res) => {
   res.json({ ok: true, count: quotes.length });
 });
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Quote server listening on http://0.0.0.0:${PORT}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Quote server listening on http://0.0.0.0:${port}`);
 });
 
 

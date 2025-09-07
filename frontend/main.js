@@ -1,6 +1,6 @@
 // frontend/main.js
 // If you later serve the frontend from Express on the same port, set API = "".
-const API = "https://pezhmanazizi-quote-backend.hosting.codeyourfuture.io";
+const url = "https://pezhmanazizi-quote-backend.hosting.codeyourfuture.io";
 
 // DOM elements
 const generateBtn = document.querySelector("#generate-quote");
@@ -21,7 +21,7 @@ function renderQuote({ quote, author }) {
 // fetch a random quote
 async function fetchQuote() {
   try {
-    const res = await fetch(`${API}/`, { headers: { Accept: "application/json" } });
+    const res = await fetch(`${url}/`, { headers: { Accept: "application/json" } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json(); // { quote, author }
     renderQuote(data);

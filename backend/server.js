@@ -3,10 +3,10 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors());          
+app.use(cors());
 app.use(express.json());  // parse JSON bodies
 
 // In‑memory data (stateful; resets on server restart)
@@ -35,8 +35,8 @@ app.post("/", (req, res) => {
   res.json({ ok: true, count: quotes.length });
 });
 
-app.listen(port, () => {
-  console.log(`Quote server listening on http://127.0.0.1:${port}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Quote server listening on http://0.0.0.0:${PORT}`);
 });
 
 

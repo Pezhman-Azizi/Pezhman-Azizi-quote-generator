@@ -1,6 +1,6 @@
 // frontend/main.js
 // If you later serve the frontend from Express on the same port, set API = "".
-const url = "https://pezhmanazizi-quote-backend.hosting.codeyourfuture.io";
+const url = "https://a4k8oo8cg8os4k00ck4oskkw.hosting.codeyourfuture.io";
 
 // DOM elements
 const generateBtn = document.querySelector("#generate-quote");

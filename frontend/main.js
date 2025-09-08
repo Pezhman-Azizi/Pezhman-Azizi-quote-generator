@@ -43,7 +43,7 @@ async function addQuote() {
   }
 
   try {
-    const res = await fetch(`${API}/`, {
+    const res = await fetch(`${url}/`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({ quote, author }),
